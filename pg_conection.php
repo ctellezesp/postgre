@@ -5,5 +5,5 @@
     $db = ltrim($dbopst["path"],'/');
     $user = $dbopst["user"];
     $pass = $dbopst["pass"];
-	$conn = pg_connect("host=".$host."port=".$port." dbname=".$db." user=".$user." password=".$pass) or die ("fail connection");
+	$conn = pg_connect("host=".$host." port=".$port." dbname=".$db." user=".$user." password=".$pass) or die ("fail connection");
 ?>
