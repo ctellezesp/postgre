@@ -80,6 +80,25 @@
 			pg_getmoney();
 		});
 
+		$("#pg_update").on("click", function(){
+			var id = $("#pg_nombres").val();
+			var dinero = $("#pg_rud>input:first").val();
+			var json = {
+				id: id,
+				dinero: dinero
+			}
+			var JSONData = JSON.stringify(json);
+			$.ajax({
+				url: "pg_update.php",
+				type: "POST",
+				data: JSONData,
+				dataType: "JSON",
+				success: function(data){
+					$("#result").html(data.msg);
+				}
+			})
+		});
+
 		
 		/*$("#mysql_delete").on("click",function(){
 			var id = $("#mysql_nombres").val();
@@ -99,26 +118,7 @@
 		})
 		});
 
-		$("#mysql_update").on("click", function(){
-			var id = $("#mysql_nombres").val();
-			var dinero = $("#mysql_rud>input:first").val();
-			var json = {
-				id: id,
-				dinero: dinero
-			}
-			var JSONData = JSON.stringify(json);
-			$.ajax({
-				url: "mysql_update.php",
-				type: "POST",
-				data: JSONData,
-				dataType: "JSON",
-				success: function(data){
-					$("#result").html(data.msg);
-				}
-			})
-		});
-
-	})*/
+		*/
 	});
 
 
