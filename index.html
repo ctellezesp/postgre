@@ -99,15 +99,14 @@
 			})
 		});
 
-		
-		/*$("#mysql_delete").on("click",function(){
-			var id = $("#mysql_nombres").val();
+		$("#pg_delete").on("click",function(){
+			var id = $("#pg_nombres").val();
 			var json = {
 				id: id
 			}
 			var JSONData = JSON.stringify(json);
 			$.ajax({
-			url: "mysql_delete.php",
+			url: "pg_delete.php",
 			type: "POST",
 			data: JSONData,
 			dataType: "JSON",
@@ -117,9 +116,10 @@
 			}
 		})
 		});
-
-		*/
+			
 	});
+
+
 
 
 	
